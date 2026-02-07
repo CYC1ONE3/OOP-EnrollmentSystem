@@ -1,7 +1,7 @@
 # OOP - Enrollment System
 
 ---
-**Author**: John Doe
+**Author**: Miguel Santos
 
 **1. Description** - Encapsulation of Student ID and Course ID
 
