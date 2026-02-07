@@ -6,11 +6,12 @@ public class Main {
         student.setName("John Doe");
         student.setID("0000123");
         student.setprogram("Information Technology");
-
+        student.display();
+/*
         System.out.println("Student Name: " + student.getName());
         System.out.println("Student ID: " + student.getID());
         System.out.println("Student's Program: " + student.getprogram());
-
+*/
         Course course = new Course();
         course.setcourseName("Inteprog");
         course.setcourseID("00001");

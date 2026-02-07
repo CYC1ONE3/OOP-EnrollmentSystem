@@ -37,7 +37,11 @@ public class Student {
         this.program = program;
     }
 
-
+public void display(){
+    System.out.println("Student Name: " + getName());
+    System.out.println("Student ID: " + getID());
+    System.out.println("Student's Program: " + getprogram());
+}
 
 
 }
