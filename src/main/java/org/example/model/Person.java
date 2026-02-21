@@ -9,7 +9,10 @@ public class Person {
     public Person(){
 
     }
+    public Person(int personID) {
+        this.personID = personID;
 
+    }
     public Person(int personID, String name, int age){
         this.personID = personID;
         this.name = name;

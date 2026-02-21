@@ -137,7 +137,11 @@ public class Main {
         personEnrollment.displayAll();
 
 
-        personEnrollment.updatePerson(new Person(06,"John Doe", 64));
+        personEnrollment.updatePerson(new Person(06));
+        personEnrollment.displayAll();
+
+        personEnrollment.delete(new Person(03));
+        personEnrollment.displayAll();
 
         StudentEnrollment enrollment = new StudentEnrollment();
 

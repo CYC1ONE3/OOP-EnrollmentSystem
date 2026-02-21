@@ -1,11 +1,12 @@
 package org.example.service;
 import org.example.model.Person;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PersonEnrollment {
 
     private ArrayList<Person> personArrayList = new ArrayList<>();
-
+    private Scanner cyc = new Scanner(System.in);
     //Create
     public void addPerson(Person person){
         personArrayList.add(person);
@@ -27,7 +28,7 @@ public class PersonEnrollment {
 
                 System.out.println("Enter age: ");
                 int age = cyc.nextInt();
-                personArrayList.set(i, person);
+                personArrayList.set(i, new Person(person.getAge()));
                 break;
             }
             }
