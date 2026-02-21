@@ -1,6 +1,7 @@
-package org.example;
+package org.example.model;
 
 public class Person {
+    private int personID;
     private String name;
     private int age;
 
@@ -9,9 +10,18 @@ public class Person {
 
     }
 
-    public Person(String name, int age){
+    public Person(int personID, String name, int age){
+        this.personID = personID;
         this.name = name;
         this.age = age;
+    }
+
+    public int getpersonID(){
+        return personID;
+    }
+
+    public void setpersonID(int personID){
+        this.personID = personID;
     }
     //getters
     public String getName(){
@@ -37,3 +47,4 @@ public class Person {
                 '}';
     }
 }
+

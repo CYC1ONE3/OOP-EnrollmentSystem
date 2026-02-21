@@ -1,24 +1,23 @@
-package org.example;
+package org.example.model;
 
 public class Student {
-    private String ID;
+    private int ID;
     private String Name;
     private String program;
 
-    public Student(){
 
-    }
-
-    public Student(String ID, String Name, String program){
+    public Student(int ID, String Name, String program){
         this.ID = ID;
          this.Name = Name;
          this.program = program;
 
     }
-    public String getID(){
+    public int getID(){
+
         return ID;
     }
-    public void setID(String ID){
+    public void setID(int ID){
+
         this.ID = ID;
         }
 
@@ -27,9 +26,11 @@ public class Student {
     }
 
     public void setName(String Name){
+
         this.Name = Name;
     }
     public String getprogram(){
+
         return program;
     }
 
@@ -37,13 +38,28 @@ public class Student {
         this.program = program;
     }
 
-public void display(){
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "ID='" + ID + '\'' +
+                ", Name='" + Name + '\'' +
+                ", program='" + program + '\'' +
+                '}';
+    }
+/*
+    public void display(){
     System.out.println("Student Name: " + getName());
     System.out.println("Student ID: " + getID());
     System.out.println("Student's Program: " + getprogram());
-}
+
+
+*/
 
 
 }
+
+
+
 
 

@@ -1,4 +1,9 @@
 package org.example;
+import org.example.model.Person;
+import org.example.model.Student;
+import org.example.service.PersonEnrollment;
+import org.example.service.StudentEnrollment;
+
 import java.util.Scanner;
 
 import java.util.ArrayList;
@@ -24,10 +29,14 @@ public class Main {
             choice = Integer.parseInt(cyc.nextLine());
 
             switch (choice) {
-                case 1: createPerson(); break;
-                case 2: readPersons(); break;
-                case 3: updatePerson(); break;
-                case 4: deletePerson(); break;
+                case 1: createPerson();
+                break;
+                case 2: readPersons();
+                break;
+                case 3: updatePerson();
+                break;
+                case 4: deletePerson();
+                break;
             }
 
         } while (choice != 5);
@@ -39,7 +48,7 @@ public class Main {
         String name = cyc.nextLine();
 
         System.out.print("Enter Age: ");
-        int age = Integer.parseInt(cyc.nextLine());
+        int age = cyc.nextLine());
 
         persons.add(new Person(name, age));
         System.out.println("Person added!");
@@ -57,7 +66,7 @@ public class Main {
         }
     }
 
-    // ✅ UPDATE
+    // UPDATE
     public static void updatePerson() {
         readPersons();
         if (persons.isEmpty()) return;
@@ -77,7 +86,7 @@ public class Main {
         System.out.println("Person updated!");
     }
 
-    // ✅ DELETE
+    // DELETE
     public static void deletePerson() {
         readPersons();
         if (persons.isEmpty()) return;
@@ -94,8 +103,9 @@ public class Main {
 public class Main {
     public static void main(String[] args) {
         Scanner cyc  = new Scanner(System.in);
+        ArrayList<Person> persons = new ArrayList<>();
 
-
+        /*
         Student student = new Student();
         student.setName("John Doe");
         student.setID("0000123");
@@ -116,11 +126,31 @@ public class Main {
         System.out.println("Course Program: " + course.getprogram());
 
 
+         */
 
-        ArrayList<Person> persons = new ArrayList();
+        PersonEnrollment personEnrollment = new PersonEnrollment();
+
+        personEnrollment.addPerson(new Person(01,"John Doe", 64));
+        personEnrollment.addPerson(new Person(02,"Wiljohn", 67));
+        personEnrollment.addPerson(new Person(03,"yev", 21));
+
+        personEnrollment.displayAll();
 
 
+        personEnrollment.updatePerson(new Person(06,"John Doe", 64));
 
+        StudentEnrollment enrollment = new StudentEnrollment();
+
+        enrollment.addStudent(new Student(2222, "Miguel", "BSIT"));
+        enrollment.addStudent(new Student(6767, "Jaques", "BSIT"));
+        enrollment.addStudent(new Student(2222, "Raphael", "BSIT"));
+
+
+        enrollment.updateStudent(new Student(676767, "Yev", "BSIT" ));
+        enrollment.displayAll();
+
+
+/*
         System.out.print("Enter Name: " );
         String Name = cyc.nextLine();
         cyc.nextLine();
@@ -146,6 +176,10 @@ public class Main {
             System.out.print("Add another person? (y/n): ");
             choice = cyc.nextLine();
         }
+
+
+ */
+        /*
         Person p1 = new Person("John Doe", 64);
         Person p2 = new Person("Bob", 88);
 
@@ -153,6 +187,10 @@ public class Main {
         persons.add(p2);
         persons.add(new Person("Charlie", 90));
         persons.add(new Person("Wiljohn", 67));
+
+
+
+
         System.out.println(persons.get(0).getName());
         System.out.println(persons.get(0).getAge());
 
@@ -162,7 +200,7 @@ public class Main {
         System.out.println(persons.get(0).getAge());
 
         persons.remove(0);
-
+*/
 
     }
 }
